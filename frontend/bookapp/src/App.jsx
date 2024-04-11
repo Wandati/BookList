@@ -22,7 +22,7 @@ function App() {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/books/");
+      const response = await axios.get("https://booklist-tp5r.onrender.com//api/books/");
       setBooks(response.data);
     } catch (error) {
       setError("Failed to fetch books");
@@ -37,7 +37,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8000/api/books/", newBook);
+      await axios.post("https://booklist-tp5r.onrender.com//api/books/", newBook);
       alert("Book added successfully");
       fetchBooks();
       setShowAddForm(false);
@@ -72,7 +72,7 @@ function App() {
 
     try {
       await axios.put(
-        `http://127.0.0.1:8000/api/books/${selectedBook.id}/`,
+        `https://booklist-tp5r.onrender.com//api/books/${selectedBook.id}/`,
         updatedBook
       );
       alert("Book updated successfully");
@@ -94,7 +94,7 @@ function App() {
     const book_id = Number(id);
     if (window.confirm("Are you sure you want to delete this book?")) {
       try {
-        await axios.delete(`http://127.0.0.1:8000/api/books/${book_id}/`);
+        await axios.delete(`https://booklist-tp5r.onrender.com//api/books/${book_id}/`);
         alert("Book deleted successfully");
         fetchBooks();
       } catch (error) {
