@@ -327,7 +327,7 @@ function App() {
                 <tr>
                   <th>Title</th>
                   <th>Author</th>
-                  <th>Publication Date</th>
+                  <th className="d-none d-md-table-cell">Publication Date</th>
                   <th>ISBN</th>
                   <th>Actions</th>
                 </tr>
@@ -337,7 +337,9 @@ function App() {
                   <tr key={book.id}>
                     <td>{book.title}</td>
                     <td>{book.author}</td>
-                    <td>{book.publication_date}</td>
+                    <td className="d-none d-md-table-cell">
+                      {book.publication_date}
+                    </td>
                     <td>{book.isbn}</td>
                     <td>
                       <button
