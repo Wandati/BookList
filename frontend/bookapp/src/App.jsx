@@ -148,8 +148,7 @@ function App() {
       <h1 className="text-center mt-5 mb-4">BooksApp</h1>
       {loading ? (
         <div className="text-center">
-          <h4 className="mt-4">Fetching Data...Might Take a while due to render's spin down with inactivity, which can delay requests by 50 seconds or more. </h4>
-      )}
+          <p className="mt-4">Fetching Data...Might Take a while due to render's spin down with inactivity, which can delay requests by 50 seconds or more. </p>
         </div>
       ) : (
         <>
